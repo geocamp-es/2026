@@ -1,0 +1,275 @@
+/* sections.css — estilos por bloque (hero, localización, testimonios, FAQ, planning, patrocinadores, mapa, organización, footer) */
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--color-text-inverse);
+  background: url('../img/backgrounds/1.jpg') center/cover no-repeat;
+  padding: 2rem 1.25rem;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-overlay);
+}
+
+.hero > * { position: relative; z-index: 1; max-width: 800px; }
+
+.hero__logo {
+  display: block;
+  width: clamp(160px, 28vw, 300px);
+  height: auto;
+  margin: 0 auto 1.5rem;
+}
+
+.hero__logo--asturies {
+  width: clamp(220px, 42vw, 480px);
+  margin-bottom: 1.8rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.hero__title {
+  font-size: clamp(2.6rem, 7vw, 4.5rem);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.02em;
+}
+
+.hero__date {
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  margin-bottom: 0.5rem;
+}
+
+.hero__tag {
+  font-size: 1.15rem;
+  margin-bottom: 2.5rem;
+}
+
+/* ---------- Localización ---------- */
+.localizacion {
+  background-image: url('../img/backgrounds/4.jpg');
+}
+
+.localizacion__icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.localizacion__icon svg {
+  width: 36px;
+  height: 36px;
+  fill: #fff;
+}
+
+/* ---------- FAQ OpenSpace ---------- */
+.faq {
+  background-image: url('../img/backgrounds/5.jpg');
+}
+
+.faq h3 { margin-top: 1.6rem; }
+.faq h3:first-child { margin-top: 0; }
+
+.propon-tema-container {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius);
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.btn:hover, .btn:focus-visible {
+  background: var(--color-accent-dark);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* ---------- Quién viene ---------- */
+.quien {
+  background: #f7f7f7;
+}
+
+.quien__card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.quien__photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  object-fit: cover;
+}
+
+/* ---------- Planificación ---------- */
+.planning {
+  background-image: url('../img/backgrounds/7.jpg');
+}
+
+/* ---------- Patrocinadores ---------- */
+.patrocinadores__logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.patrocinadores__logos img {
+  max-height: 90px;
+  width: auto;
+  filter: grayscale(0.2);
+  transition: filter var(--transition);
+}
+
+.patrocinadores__logos img:hover { filter: none; }
+
+/* ---------- Testimonios ---------- */
+.testimonios {
+  padding: 4rem 0;
+}
+
+.testimonios__quote {
+  position: relative;
+  max-width: 720px;
+  margin: 2rem auto 1.5rem;
+  font-size: 1.1rem;
+  font-style: italic;
+  text-align: center;
+  min-height: 4rem;
+}
+
+.testimonios__quote::before,
+.testimonios__quote::after {
+  content: '\201C';
+  font-size: 3rem;
+  color: var(--color-accent);
+  line-height: 0;
+  vertical-align: -0.4em;
+  margin-right: 0.2rem;
+}
+
+.testimonios__quote::after { content: '\201D'; margin: 0 0 0 0.2rem; }
+
+.testimonios__thumbs {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonios__thumbs button {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.testimonios__thumbs img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0.5;
+  border: 3px solid transparent;
+  transition: opacity var(--transition), border-color var(--transition);
+}
+
+.testimonios__thumbs button[aria-current="true"] img {
+  opacity: 1;
+  border-color: var(--color-accent);
+}
+
+/* ---------- Ediciones ---------- */
+.ediciones {
+  margin: 0.5rem 0 1rem;
+  padding: 0 0 0 1.2rem;
+  list-style: disc;
+  color: var(--color-muted);
+}
+
+.ediciones li { margin-bottom: 0.25rem; }
+
+/* ---------- Mapa ---------- */
+.mapa {
+  width: 100%;
+  border: 0;
+  height: 360px;
+  display: block;
+}
+
+/* ---------- Organización ---------- */
+.organizacion__logo {
+  max-width: 220px;
+  margin: 0 auto;
+  transition: opacity var(--transition);
+}
+
+.organizacion__logo:hover { opacity: 0.8; }
+
+/* ---------- Footer ---------- */
+.footer {
+  background: #2a2a2a;
+  color: #d4d4d4;
+  padding: 2rem 0;
+  font-size: 0.95rem;
+}
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer p { margin: 0; }
+
+.footer__social a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  transition: background var(--transition);
+}
+
+.footer__social a:hover { background: var(--color-accent); }
+
+.footer__social svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+}

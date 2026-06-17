@@ -1,0 +1,56 @@
+/* layout.css — grid y contenedores */
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section--narrow { padding: 2.5rem 0; }
+
+.section--bg {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: var(--color-text-inverse);
+}
+
+.section--bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-overlay);
+}
+
+.section--bg > * { position: relative; z-index: 1; }
+
+.section--bg h2,
+.section--bg h3,
+.section--bg p,
+.section--bg a { color: inherit; }
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid--center { justify-items: center; text-align: center; }
+
+.grid--cards {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.grid--org {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  justify-items: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .section { padding: 5.5rem 0; }
+}

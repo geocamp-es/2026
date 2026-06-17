@@ -1,0 +1,85 @@
+/* base.css — reset ligero, variables y tipografía */
+
+:root {
+  --color-accent: #e8643e;
+  --color-accent-dark: #c75230;
+  --color-text: #3d3d3d;
+  --color-text-inverse: #ffffff;
+  --color-muted: #6b6b6b;
+  --color-bg: #ffffff;
+  --color-overlay: rgba(0, 0, 0, 0.55);
+  --font-sans: 'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --max-width: 1140px;
+  --radius: 6px;
+  --transition: 0.3s ease;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+h1, h2, h3, h4, h5 {
+  font-weight: 300;
+  line-height: 1.25;
+  margin: 0 0 0.6em;
+  color: inherit;
+}
+
+h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); }
+h2 { font-size: clamp(1.8rem, 3.6vw, 2.4rem); }
+h3 { font-size: clamp(1.4rem, 2.8vw, 1.8rem); }
+h4 { font-size: 1.2rem; font-weight: 400; }
+h5 { font-size: 1rem; font-weight: 400; color: var(--color-accent); }
+
+p { margin: 0 0 1em; }
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+a:hover, a:focus-visible { color: var(--color-accent-dark); }
+
+::selection { background: var(--color-accent); color: #fff; text-shadow: none; }
+
+strong { font-weight: 700; }
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,12 @@
+[
+  { "year": 2013, "city": "Vigo",            "url": "http://2013.geocamp.es" },
+  { "year": 2014, "city": "A Coruña",        "url": "http://2014.geocamp.es" },
+  { "year": 2015, "city": "Sevilla",         "url": "http://2015.geocamp.es" },
+  { "year": 2016, "city": "Barcelona",       "url": "http://2016.geocamp.es" },
+  { "year": 2017, "city": "Almería",         "url": "http://2017.geocamp.es" },
+  { "year": 2018, "city": "Madrid",          "url": "http://2018.geocamp.es" },
+  { "year": 2019, "city": "Valencia",        "url": "http://2019.geocamp.es" },
+  { "year": 2023, "city": "Illa de San Simón","url": "http://2023.geocamp.es" },
+  { "year": 2024, "city": "Pamplona",        "url": "http://2024.geocamp.es" },
+  { "year": 2025, "city": "Zaragoza",        "url": "http://2025.geocamp.es" }
+]

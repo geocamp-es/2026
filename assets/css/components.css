@@ -1,0 +1,121 @@
+/* components.css — menú, countdown, scroll-top */
+
+/* ---------- Menú lateral ---------- */
+.menu-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition);
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus-visible { background: var(--color-accent); }
+
+.menu-toggle svg { width: 22px; height: 22px; fill: currentColor; }
+
+.primary-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: #3d3d3d;
+  color: #fff;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  text-align: center;
+  padding: 1rem 0;
+  transform: translateY(-100%);
+  transition: transform var(--transition);
+}
+
+.primary-menu[data-open="true"] { transform: translateY(0); }
+
+.primary-menu a {
+  display: inline-block;
+  margin: 0 0.8rem;
+  padding: 0.6rem 0;
+  color: #fff;
+}
+
+.primary-menu a:hover,
+.primary-menu a:focus-visible { color: var(--color-accent); }
+
+/* ---------- Countdown ---------- */
+.timer {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.timer__unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+  padding: 0.8rem 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+}
+
+.timer__value {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.timer__label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
+}
+
+/* ---------- Scroll-top ---------- */
+.scroll-top {
+  position: fixed;
+  right: 1.2rem;
+  bottom: 1.2rem;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  transition: background var(--transition), transform var(--transition);
+  z-index: 900;
+}
+
+.scroll-top[data-visible="true"] { display: inline-flex; }
+
+.scroll-top:hover { background: var(--color-accent-dark); transform: translateY(-2px); }
+
+.scroll-top svg { width: 20px; height: 20px; fill: currentColor; }
+
+@media (min-width: 768px) {
+  .primary-menu {
+    font-size: 1.1rem;
+    padding: 1.2rem 0;
+  }
+  .primary-menu a { margin: 0 1.1rem; }
+}
