@@ -22,7 +22,7 @@ jQuery(document).ready(function () {
 	/*
 		Countdown initializer
 	*/
-	var now = new Date("2024/10/19");
+	var now = new Date("2026/10/03");
 	var countTo = now.valueOf();
 	$('.timer').countdown(countTo, function (event) {
 		$(this).find('.days').text(event.offset.totalDays);

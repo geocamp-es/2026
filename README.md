@@ -1,11 +1,11 @@
-2024-geocamp
+2026-geocamp
 ============
 
-# Web del GeoCamp 2024 en Pamplona
+# Web del GeoCamp 2026 en Asturias
 
-https://2024.geocamp.es/
+https://2026.geocamp.es/
 
 # Detalles
 
-* Fecha: 19 de Octubre
-* Lugar: Pamplona
+* Fecha: ??
+* Lugar: Algún lugar de la cuenca minera
