@@ -1,200 +1,408 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GeoCamp ES 2026 — 3 de octubre, Asturias. Congreso OpenSpace de la comunidad Geoinquietos sobre GIS, geodatos abiertos y software libre geoespacial.">
-  <title>GeoCamp ES — 3 de octubre de 2026 — Asturias</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="GeoCamp ES 2026 — 3 de octubre, Asturias. Congreso OpenSpace de la comunidad Geoinquietos sobre GIS, geodatos abiertos y software libre geoespacial."
+    />
+    <title>GeoCamp ES — 3 de octubre de 2026 — Asturias</title>
 
-  <link rel="icon" href="assets/img/logo_geocamp.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/img/logo_geocamp.svg" type="image/svg+xml" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+    />
 
-  <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/layout.css">
-  <link rel="stylesheet" href="assets/css/sections.css">
-  <link rel="stylesheet" href="assets/css/components.css">
-</head>
-<body>
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/sections.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+  </head>
+  <body>
+    <button
+      class="menu-toggle"
+      data-menu-toggle
+      aria-controls="primary-menu"
+      aria-expanded="false"
+      aria-label="Mostrar menú"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M3 6h18M3 12h18M3 18h18"
+          stroke="currentColor"
+          stroke-width="2"
+          fill="none"
+          stroke-linecap="round"
+        />
+      </svg>
+    </button>
 
-  <button class="menu-toggle" data-menu-toggle aria-controls="primary-menu" aria-expanded="false" aria-label="Mostrar menú">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
-  </button>
+    <nav
+      id="primary-menu"
+      class="primary-menu"
+      data-menu
+      aria-label="Navegación principal"
+      hidden
+    >
+      <a href="#top">Arriba</a>
+      <a href="#que-es">¿Qué es?</a>
+      <a href="#localizacion">Localización</a>
+      <a href="#openspace">¿Cómo funciona?</a>
+      <a href="#quien-viene">¿Quién vendrá?</a>
+      <a href="#planificacion">Planificación</a>
+      <a href="#patrocinadores">Patrocinadores</a>
+      <a href="#mapa">Dónde estaremos</a>
+      <a href="#organizacion">Organización</a>
+    </nav>
 
-  <nav id="primary-menu" class="primary-menu" data-menu aria-label="Navegación principal" hidden>
-    <a href="#top">Arriba</a>
-    <a href="#que-es">¿Qué es?</a>
-    <a href="#localizacion">Localización</a>
-    <a href="#openspace">¿Cómo funciona?</a>
-    <a href="#quien-viene">¿Quién vendrá?</a>
-    <a href="#planificacion">Planificación</a>
-    <a href="#patrocinadores">Patrocinadores</a>
-    <a href="#mapa">Dónde estaremos</a>
-    <a href="#organizacion">Organización</a>
-  </nav>
+    <header class="hero" id="top">
+      <img
+        class="hero__logo"
+        src="assets/img/logo-geocamp-asturies-blanco.png"
+        alt="Logo GeoCamp Asturies"
+        width="1171"
+        height="896"
+        decoding="async"
+      />
+      <p class="hero__date">3 de octubre de 2026 · Asturias</p>
+      <p class="hero__tag">¡Un día para hablar de GIS!</p>
+      <p>Abriremos el registro muy pronto.</p>
 
-  <header class="hero" id="top">
-    <img class="hero__logo hero__logo--asturies" src="assets/img/logo-geocamp-asturies-bandera.png" alt="Logo GeoCamp Asturies" width="1171" height="896" decoding="async">
-    <p class="hero__date">3 de octubre de 2026 · Asturias</p>
-    <p class="hero__tag">¡Un día para hablar de GIS!</p>
-    <p>Abriremos el registro muy pronto.</p>
-
-    <div class="timer" data-event-date="2026-10-03T09:00:00+02:00" aria-live="polite">
-      <div class="timer__unit">
-        <span class="timer__value" data-unit="days">--</span>
-        <span class="timer__label">días</span>
-      </div>
-      <div class="timer__unit">
-        <span class="timer__value" data-unit="hours">--</span>
-        <span class="timer__label">horas</span>
-      </div>
-      <div class="timer__unit">
-        <span class="timer__value" data-unit="minutes">--</span>
-        <span class="timer__label">minutos</span>
-      </div>
-      <div class="timer__unit">
-        <span class="timer__value" data-unit="seconds">--</span>
-        <span class="timer__label">segundos</span>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="section" id="que-es">
-      <div class="container">
-        <h2>¿Qué es GeoCamp ES?</h2>
-        <p>GeoCamp ES es un congreso nacional del colectivo internacional <a href="http://geoinquietos.org/">Geoinquietos</a>.</p>
-        <p>Geoinquietos son grupos informales que se reúnen para conversar y aprender sobre cualquier tema relacionado con las ciencias de la tierra. No hay (todavía) una estructura formal por lo que cada grupo se organiza a su manera, aunque hay ciertas características comunes como son disponer de un foro de discusión, generalmente una lista de correo, y una cuenta en twitter. Puedes consultar más información en esta <a href="https://geoinquietosmadrid.github.io/geoinquietos-y-osgeoes/#/">introducción a Geoinquietos</a>.</p>
-        <p>La comunidad Geoinquietos siente especial afinidad por la enorme panoplia de servicios de geodatos abiertos disponibles en Internet como los servicios <a href="https://en.wikipedia.org/wiki/Infrastructure_for_Spatial_Information_in_the_European_Community">INSPIRE</a>, proyectos comunitarios como <a href="https://www.openstreetmap.org">OpenStreetMap</a> y la enorme oferta de software libre de calidad profesional usada mundialmente en toda clase de servicios y aplicaciones SIG, especialmente alrededor de la comunidad <a href="https://osgeo.org">OSGeo</a>. Pero también está abierta a profesionales de geomática que trabajan con software propietario pero gustan de compartir conocimientos y aprender en grupo.</p>
-        <p>Este congreso es sin ánimo de lucro, de asistencia gratuita y autofinanciado.</p>
-        <p>Este año, el formato de GeoCamp es el de <a href="https://es.wikipedia.org/wiki/Desconferencia">Open Space</a>: todos los participantes toman un papel activo en la ejecución del evento para aumentar la interacción entre los asistentes de tú a tú (en lugar del modelo tradicional de conferencia de comunicación de uno a muchos) para ser capaces, con agilidad e improvisación, de satisfacer espontáneamente las inquietudes de los participantes, tanto las que traigan de casa como las que surjan durante la jornada.</p>
-        <p>GeoCamp ES nació en 2013 como el resultado de la participación en <a href="https://www.flickr.com/photos/geocamp/" target="_blank" rel="noopener">GeoCamp 2012</a> en Campo Maior, Portugal.</p>
-
-        <p><strong>Ediciones anteriores:</strong></p>
-        <ul id="ediciones-list" class="ediciones"></ul>
-
-        <p>No te olvides que puedes seguirnos en X (<a href="http://twitter.com/GeoCampES" target="_blank" rel="noopener">@GeoCampES</a>) y hemos creado un <a href="https://t.me/joinchat/AGMxEkb2muPxA0_ynqReCQ" target="_blank" rel="noopener">grupo Telegram</a> al que puedes apuntarte. Apúntate y comenta, participa, quéjate y ayúdanos a organizar el evento.</p>
-        <h3>¡Nos vemos en Asturies!</h3>
-      </div>
-    </section>
-
-    <section class="section section--bg localizacion" id="localizacion">
-      <div class="container grid grid--center">
-        <h2>Localización</h2>
-        <a href="https://www.openstreetmap.org/way/115374776" target="_blank" rel="noopener">
-          <span class="localizacion__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-          </span>
-          <h3 style="color:#fff;">Llangréu · Asturies</h3>
-        </a>
-      </div>
-    </section>
-
-    <section class="testimonios">
-      <div class="container">
-        <h2 style="text-align:center;">Lo que dijeron de GeoCamp en las anteriores ediciones</h2>
-        <blockquote class="testimonios__quote" data-testimonial-active>“”</blockquote>
-        <div class="testimonios__thumbs">
-          <button type="button" data-testimonial-thumb="0" data-testimonial-text="Fotaza de grupo, merced de @FuertesJG #GeoCampES — https://pbs.twimg.com/media/DJ3fDt3W4AAqEwC.jpg — @GeoCampES" aria-label="Testimonio 1">
-            <img src="https://pbs.twimg.com/profile_images/759677421260050432/AxStJkpu_400x400.jpg" alt="" loading="lazy">
-          </button>
-          <button type="button" data-testimonial-thumb="2" data-testimonial-text="Enhorabuena a la organización del #geocampes. Valéis para volver a organizarlo :-) #MuchoNivel — @aitorfreire" aria-label="Testimonio 3">
-            <img src="https://pbs.twimg.com/profile_images/378800000040667457/eb3e5dda6cedb0f28609097433aafc6a_bigger.jpeg" alt="" loading="lazy">
-          </button>
-          <button type="button" data-testimonial-thumb="3" data-testimonial-text="Una p*** mierda, nada que ver con las JIIDE, ¡esas si que molan! — @Trolpical" aria-label="Testimonio 4">
-            <img src="https://pbs.twimg.com/profile_images/1690601343/trolpical_bigger.png" alt="" loading="lazy">
-          </button>
+      <div
+        class="timer"
+        data-event-date="2026-10-03T09:00:00+02:00"
+        aria-live="polite"
+      >
+        <div class="timer__unit">
+          <span class="timer__value" data-unit="days">--</span>
+          <span class="timer__label">días</span>
+        </div>
+        <div class="timer__unit">
+          <span class="timer__value" data-unit="hours">--</span>
+          <span class="timer__label">horas</span>
+        </div>
+        <div class="timer__unit">
+          <span class="timer__value" data-unit="minutes">--</span>
+          <span class="timer__label">minutos</span>
+        </div>
+        <div class="timer__unit">
+          <span class="timer__value" data-unit="seconds">--</span>
+          <span class="timer__label">segundos</span>
         </div>
       </div>
-    </section>
+    </header>
 
-    <section class="section section--bg faq" id="openspace">
-      <div class="container">
-        <h2>¿Cómo funciona un Open Space?</h2>
+    <main>
+      <section class="section" id="que-es">
+        <div class="container">
+          <h2>¿Qué es GeoCamp ES?</h2>
+          <p>
+            GeoCamp ES es un congreso nacional del colectivo internacional
+            <a href="http://geoinquietos.org/">Geoinquietos</a>.
+          </p>
+          <p>
+            Geoinquietos son grupos informales que se reúnen para conversar y
+            aprender sobre cualquier tema relacionado con las ciencias de la
+            tierra. No hay (todavía) una estructura formal por lo que cada grupo
+            se organiza a su manera, aunque hay ciertas características comunes
+            como son disponer de un foro de discusión, generalmente una lista de
+            correo, y una cuenta en twitter. Puedes consultar más información en
+            esta
+            <a
+              href="https://geoinquietosmadrid.github.io/geoinquietos-y-osgeoes/#/"
+              >introducción a Geoinquietos</a
+            >.
+          </p>
+          <p>
+            La comunidad Geoinquietos siente especial afinidad por la enorme
+            panoplia de servicios de geodatos abiertos disponibles en Internet
+            como los servicios
+            <a
+              href="https://en.wikipedia.org/wiki/Infrastructure_for_Spatial_Information_in_the_European_Community"
+              >INSPIRE</a
+            >, proyectos comunitarios como
+            <a href="https://www.openstreetmap.org">OpenStreetMap</a> y la
+            enorme oferta de software libre de calidad profesional usada
+            mundialmente en toda clase de servicios y aplicaciones SIG,
+            especialmente alrededor de la comunidad
+            <a href="https://osgeo.org">OSGeo</a>. Pero también está abierta a
+            profesionales de geomática que trabajan con software propietario
+            pero gustan de compartir conocimientos y aprender en grupo.
+          </p>
+          <p>
+            Este congreso es sin ánimo de lucro, de asistencia gratuita y
+            autofinanciado.
+          </p>
+          <p>
+            Este año, el formato de GeoCamp es el de
+            <a href="https://es.wikipedia.org/wiki/Desconferencia">Open Space</a
+            >: todos los participantes toman un papel activo en la ejecución del
+            evento para aumentar la interacción entre los asistentes de tú a tú
+            (en lugar del modelo tradicional de conferencia de comunicación de
+            uno a muchos) para ser capaces, con agilidad e improvisación, de
+            satisfacer espontáneamente las inquietudes de los participantes,
+            tanto las que traigan de casa como las que surjan durante la
+            jornada.
+          </p>
+          <p>
+            GeoCamp ES nació en 2013 como el resultado de la participación en
+            <a
+              href="https://www.flickr.com/photos/geocamp/"
+              target="_blank"
+              rel="noopener"
+              >GeoCamp 2012</a
+            >
+            en Campo Maior, Portugal.
+          </p>
 
-        <h3>¿Qué es el OpenSpace?</h3>
-        <p>En el OpenSpace la idea es que una persona proponga un tema sobre el que quiere conversar o que le interese, algo sobre lo que ha trabajado o tiene algo preparado y lo comparta con el resto de asistentes.</p>
+          <p><strong>Ediciones anteriores:</strong></p>
+          <ul id="ediciones-list" class="ediciones"></ul>
 
-        <h3>¿Cómo funciona?</h3>
-        <p>Los interesados en el tema se reunirán en la sala habilitada y uno o varios de los que hayan propuesto el tema serán los moderadores de la sesión. La idea es que fluya la conversación y los asistentes vayan navegando por el tema hacia los puntos que más interés generen.</p>
-
-      </div>
-    </section>
-
-    <section class="section quien" id="quien-viene">
-      <div class="container">
-        <h2 style="text-align:center;">¿Quién vendrá este año?</h2>
-        <div class="grid grid--cards">
-          <article class="quien__card">
-            <img class="quien__photo" src="assets/img/Octopuses-review.jpg" alt="" loading="lazy">
-            <h3>Tú</h3>
-            <h5>Geoinquieto</h5>
-            <p>Nadie mejor que tú mismo para saber quién eres. Vendrás a la GeoCamp, hablarás de GIS y disfrutarás de un día en la preciosa Asturies.</p>
-          </article>
+          <p>
+            No te olvides que puedes seguirnos en X (<a
+              href="http://twitter.com/GeoCampES"
+              target="_blank"
+              rel="noopener"
+              >@GeoCampES</a
+            >) y hemos creado un
+            <a
+              href="https://t.me/joinchat/AGMxEkb2muPxA0_ynqReCQ"
+              target="_blank"
+              rel="noopener"
+              >grupo Telegram</a
+            >
+            al que puedes apuntarte. Apúntate y comenta, participa, quéjate y
+            ayúdanos a organizar el evento.
+          </p>
+          <h3>¡Nos vemos en Asturies!</h3>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section section--bg planning" id="planificacion">
-      <div class="container">
-        <h2>Planificación</h2>
-        <p>Disponible próximamente.</p>
-      </div>
-    </section>
-
-    <section class="section" id="patrocinadores">
-      <div class="container" style="text-align:center;">
-        <h2>Patrocinan</h2>
-        <p>GeoCamp ES es posible gracias al esfuerzo de las entidades que nos patrocinan. Si estás interesada en ser una de ellas puedes descargar nuestra <a href="assets/documents/geocampES_sponsor_pack.pdf" target="_blank" rel="noopener">guía para patrocinar</a>.</p>
-        <div class="patrocinadores__logos">
-          <a href="http://icarto.es/" target="_blank" rel="noopener"><img src="assets/img/patrocinadores/icarto.png" alt="iCarto"></a>
-          <a href="http://www.geomatico.es/" target="_blank" rel="noopener"><img src="assets/img/patrocinadores/logo_vertical_color_png300pp.png" alt="Geomatico"></a>
-        </div>
-      </div>
-    </section>
-
-    <section id="mapa" aria-label="Mapa de localización">
-      <iframe class="mapa" title="Mapa de Llangréu, Asturies"
-        src="https://api.maptiler.com/maps/992b4731-d1b3-449a-b79b-5dc7938a63e6/?key=LqOKqjXlNHCUvaHo6msW#18/43.294192/-5.682842"
-        loading="lazy"></iframe>
-    </section>
-
-    <section class="section" id="organizacion">
-      <div class="container" style="text-align:center;">
-        <h2>Organización</h2>
-        <div class="grid grid--org">
-          <a href="https://geoinquietos.org/grupos/galicia/" target="_blank" rel="noopener">
-            <img class="organizacion__logo" src="assets/img/organizacion/logo_xeoInquedos.png" alt="Xeoinquedos">
+      <section class="section section--bg localizacion" id="localizacion">
+        <div class="container grid grid--center">
+          <h2>Localización</h2>
+          <a
+            href="https://www.openstreetmap.org/way/115374776"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="localizacion__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"
+                />
+              </svg>
+            </span>
+            <h3 style="color: #fff">Llangréu · Asturies</h3>
           </a>
-          <a href="https://ghandalf.org" target="_blank" rel="noopener">
-            <img class="organizacion__logo" src="assets/img/organizacion/logo-ghandalf.png" alt="Asociación Ghandalf">
+        </div>
+      </section>
+
+      <section class="testimonios">
+        <div class="container">
+          <h2 style="text-align: center">
+            Lo que dijeron de GeoCamp en las anteriores ediciones
+          </h2>
+          <blockquote class="testimonios__quote" data-testimonial-active>
+            “”
+          </blockquote>
+          <div class="testimonios__thumbs">
+            <button
+              type="button"
+              data-testimonial-thumb="0"
+              data-testimonial-text="Fotaza de grupo, merced de @FuertesJG #GeoCampES — https://pbs.twimg.com/media/DJ3fDt3W4AAqEwC.jpg — @GeoCampES"
+              aria-label="Testimonio 1"
+            >
+              <img
+                src="https://pbs.twimg.com/profile_images/759677421260050432/AxStJkpu_400x400.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </button>
+            <button
+              type="button"
+              data-testimonial-thumb="2"
+              data-testimonial-text="Enhorabuena a la organización del #geocampes. Valéis para volver a organizarlo :-) #MuchoNivel — @aitorfreire"
+              aria-label="Testimonio 3"
+            >
+              <img
+                src="https://pbs.twimg.com/profile_images/378800000040667457/eb3e5dda6cedb0f28609097433aafc6a_bigger.jpeg"
+                alt=""
+                loading="lazy"
+              />
+            </button>
+            <button
+              type="button"
+              data-testimonial-thumb="3"
+              data-testimonial-text="Una p*** mierda, nada que ver con las JIIDE, ¡esas si que molan! — @Trolpical"
+              aria-label="Testimonio 4"
+            >
+              <img
+                src="https://pbs.twimg.com/profile_images/1690601343/trolpical_bigger.png"
+                alt=""
+                loading="lazy"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--bg faq" id="openspace">
+        <div class="container">
+          <h2>¿Cómo funciona un Open Space?</h2>
+
+          <h3>¿Qué es el OpenSpace?</h3>
+          <p>
+            En el OpenSpace la idea es que una persona proponga un tema sobre el
+            que quiere conversar o que le interese, algo sobre lo que ha
+            trabajado o tiene algo preparado y lo comparta con el resto de
+            asistentes.
+          </p>
+
+          <h3>¿Cómo funciona?</h3>
+          <p>
+            Los interesados en el tema se reunirán en la sala habilitada y uno o
+            varios de los que hayan propuesto el tema serán los moderadores de
+            la sesión. La idea es que fluya la conversación y los asistentes
+            vayan navegando por el tema hacia los puntos que más interés
+            generen.
+          </p>
+        </div>
+      </section>
+
+      <section class="section quien" id="quien-viene">
+        <div class="container">
+          <h2 style="text-align: center">¿Quién vendrá este año?</h2>
+          <div class="grid grid--cards">
+            <article class="quien__card">
+              <img
+                class="quien__photo"
+                src="assets/img/Octopuses-review.jpg"
+                alt=""
+                loading="lazy"
+              />
+              <h3>Tú</h3>
+              <h5>Geoinquieto</h5>
+              <p>
+                Nadie mejor que tú mismo para saber quién eres. Vendrás a la
+                GeoCamp, hablarás de GIS y disfrutarás de un día en la preciosa
+                Asturies.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--bg planning" id="planificacion">
+        <div class="container">
+          <h2>Planificación</h2>
+          <p>Disponible próximamente.</p>
+        </div>
+      </section>
+
+      <section class="section" id="patrocinadores">
+        <div class="container" style="text-align: center">
+          <h2>Patrocinan</h2>
+          <p>
+            GeoCamp ES es posible gracias al esfuerzo de las entidades que nos
+            patrocinan. Si estás interesada en ser una de ellas puedes descargar
+            nuestra
+            <a
+              href="assets/documents/Guia-de-Patrocinio-GeoCampES-Asturies-2026.pdf"
+              target="_blank"
+              rel="noopener"
+              >guía para patrocinar</a
+            >.
+          </p>
+          <div class="patrocinadores__logos">
+            <a href="http://icarto.es/" target="_blank" rel="noopener"
+              ><img src="assets/img/patrocinadores/icarto.png" alt="iCarto"
+            /></a>
+            <a href="http://www.geomatico.es/" target="_blank" rel="noopener"
+              ><img
+                src="assets/img/patrocinadores/logo_vertical_color_png300pp.png"
+                alt="Geomatico"
+            /></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="mapa" aria-label="Mapa de localización">
+        <iframe
+          class="mapa"
+          title="Mapa de Llangréu, Asturies"
+          src="https://api.maptiler.com/maps/992b4731-d1b3-449a-b79b-5dc7938a63e6/?key=LqOKqjXlNHCUvaHo6msW#18/43.294192/-5.682842"
+          loading="lazy"
+        ></iframe>
+      </section>
+
+      <section class="section" id="organizacion">
+        <div class="container" style="text-align: center">
+          <h2>Organización</h2>
+          <div class="grid grid--org">
+            <a
+              href="https://geoinquietos.org/grupos/galicia/"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="organizacion__logo"
+                src="assets/img/organizacion/logo_xeoInquedos.png"
+                alt="Xeoinquedos"
+              />
+            </a>
+            <a href="https://ghandalf.org" target="_blank" rel="noopener">
+              <img
+                class="organizacion__logo"
+                src="assets/img/organizacion/logo-ghandalf.png"
+                alt="Asociación Ghandalf"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>GeoCamp ES · 2026</p>
+        <div class="footer__social">
+          <a
+            href="http://twitter.com/GeoCampES"
+            target="_blank"
+            rel="noopener"
+            aria-label="Twitter"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05A4.28 4.28 0 0 0 16.11 4c-2.36 0-4.28 1.92-4.28 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.76 2.81 1.91 3.58-.71 0-1.37-.2-1.95-.5v.05c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07c.54 1.69 2.11 2.93 3.97 2.97A8.6 8.6 0 0 1 2 18.57a12.13 12.13 0 0 0 6.56 1.92c7.88 0 12.18-6.53 12.18-12.18 0-.18 0-.37-.01-.55.84-.6 1.56-1.36 2.13-2.23z"
+              />
+            </svg>
           </a>
         </div>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <footer class="footer">
-    <div class="container">
-      <p>GeoCamp ES · 2026</p>
-      <div class="footer__social">
-        <a href="http://twitter.com/GeoCampES" target="_blank" rel="noopener" aria-label="Twitter">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05A4.28 4.28 0 0 0 16.11 4c-2.36 0-4.28 1.92-4.28 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.76 2.81 1.91 3.58-.71 0-1.37-.2-1.95-.5v.05c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07c.54 1.69 2.11 2.93 3.97 2.97A8.6 8.6 0 0 1 2 18.57a12.13 12.13 0 0 0 6.56 1.92c7.88 0 12.18-6.53 12.18-12.18 0-.18 0-.37-.01-.55.84-.6 1.56-1.36 2.13-2.23z"/></svg>
-        </a>
-      </div>
-    </div>
-  </footer>
+    <button
+      class="scroll-top"
+      data-scroll-top
+      aria-label="Volver arriba"
+      hidden
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 4l-8 8h5v8h6v-8h5z" />
+      </svg>
+    </button>
 
-  <button class="scroll-top" data-scroll-top aria-label="Volver arriba" hidden>
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
-  </button>
-
-  <script src="assets/js/menu.js" defer></script>
-  <script src="assets/js/countdown.js" defer></script>
-  <script src="assets/js/ediciones.js" defer></script>
-  <script src="assets/js/testimonios.js" defer></script>
-  <script src="assets/js/scroll-top.js" defer></script>
-</body>
+    <script src="assets/js/menu.js" defer></script>
+    <script src="assets/js/countdown.js" defer></script>
+    <script src="assets/js/ediciones.js" defer></script>
+    <script src="assets/js/testimonios.js" defer></script>
+    <script src="assets/js/scroll-top.js" defer></script>
+  </body>
 </html>
