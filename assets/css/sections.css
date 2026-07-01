@@ -55,6 +55,12 @@
   margin-bottom: 2.5rem;
 }
 
+.hero__cta {
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
 /* ---------- Localización ---------- */
 .localizacion {
   background-image: url('../img/backgrounds/4.jpg');
