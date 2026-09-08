@@ -198,7 +198,7 @@
 }
 
 .patrocinadores__logos img {
-  max-height: 90px;
+  max-height: 130px;
   width: auto;
   filter: grayscale(0.2);
   transition: filter var(--transition);
